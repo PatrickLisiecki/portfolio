@@ -34,12 +34,9 @@ const Home = () => {
                         exit="hidden"
                         className="max-w-sm mx-auto mb-10 xl:max-w-xl xl:mx-0 xl:mb-16"
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nullam vel massa tortor. Aliquam dignissim mauris a
-                        purus rhoncus, sed semper est mollis. Cras at lorem
-                        felis. Proin a ex eget ligula feugiat dapibus sed non
-                        nisl. Nullam in dolor lectus. Vestibulum mollis nunc non
-                        orci aliquam, a tincidunt velit pellentesque.
+                        Full-stack developer and CS student at CUNY with a
+                        passion for technology and a desire to create impactful
+                        applications.
                     </motion.p>
                     <div className="relative flex justify-center xl:hidden">
                         <ProjectsBtn />

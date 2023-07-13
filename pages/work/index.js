@@ -19,7 +19,7 @@ const Work = () => {
                             exit="hidden"
                             className="h2 xl:mt-12"
                         >
-                            My work <span className="text-accent">.</span>
+                            My Projects<span className="text-accent">.</span>
                         </motion.h2>
                         <motion.p
                             variants={fadeIn("up", 0.4)}
@@ -28,8 +28,9 @@ const Work = () => {
                             exit="hidden"
                             className="max-w-[400px] mx-auto mb-4 lg:mx-0"
                         >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Nullam vel massa tortor.
+                            A collection of personal projects and work done
+                            throughout my undergraduate degree. Click on a
+                            project to view the code and a detailed walkthrough.
                         </motion.p>
                     </div>
                     <motion.div

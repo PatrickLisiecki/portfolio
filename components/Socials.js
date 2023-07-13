@@ -6,7 +6,7 @@ import { FaLinkedin, FaSquareGithub } from "react-icons/fa6";
 
 const Socials = () => {
     return (
-        <div className="flex items-center gap-x-5 text-2xl">
+        <div className="flex items-center gap-x-5 text-3xl">
             <Link
                 href={"https://www.linkedin.com/in/patricklisiecki"}
                 target="_blank"
