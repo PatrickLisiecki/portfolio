@@ -1,4 +1,4 @@
-// Import fonts
+// Import font
 import { Sora } from "@next/font/google";
 
 // Font settings
