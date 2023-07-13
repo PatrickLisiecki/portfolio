@@ -124,11 +124,14 @@ const aboutData = [
         title: "credentials",
         info: [
             {
-                title: "BS Computer Science - City University of New York, College of Staten Island",
+                title: "Bachelor of Science Computer Science",
+                subtitle:
+                    "City University of New York, College of Staten Island",
                 stage: "Expected 2024",
             },
             {
-                title: "Full Stack Software Engineer Student - Tech Talent Pipeline",
+                title: "Full Stack Software Engineer Student",
+                subtitle: "Tech Talent Pipeline",
                 stage: "June 2023 - Present",
             },
         ],
@@ -157,13 +160,13 @@ const About = () => {
                         initial="hidden"
                         animate="show"
                         exit="hidden"
-                        className="text-2xl"
+                        className="text-4xl"
                     >
                         Solving{" "}
                         <span className="text-accent">complex problems </span>
                         and{" "}
                         <span className="text-accent">
-                            crafting elegant solutions{" "}
+                            creating elegant solutions{" "}
                         </span>
                         is why I decided to pursue a CS degree.
                     </motion.span>
@@ -172,14 +175,14 @@ const About = () => {
                         initial="hidden"
                         animate="show"
                         exit="hidden"
-                        className="max-w-[500px] mx-auto mb-6 px-2 xl:mx-0 xl:mb-12 xl:px-0"
+                        className="max-w-[500px] mx-auto my-4 mb-6 px-2 text-lg xl:mx-0 xl:mb-12 xl:px-0"
                     >
                         From crafting visually engaging user interfaces to
                         working on backend systems, the full-service delivery
                         process of apps is what I love about full-stack
                         engineering.
                     </motion.p>
-                    <motion.div
+                    {/* <motion.div
                         variants={fadeIn("right", 0.6)}
                         initial="hidden"
                         animate="show"
@@ -195,24 +198,24 @@ const About = () => {
                                     Years of experience
                                 </div>
                             </div>
-                            {/* <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                            <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                                 <div className="text-2xl font-extrabold text-accent mb-2 xl:text-4xl">
                                     <CountUp start={0} end={250} duration={5} />
                                 </div>
                                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                                     Satisfied Clients
                                 </div>
-                            </div> */}
-                            {/* <div className="relative flex-1">
+                            </div> 
+                            <div className="relative flex-1">
                                 <div className="text-2xl font-extrabold text-accent mb-2 xl:text-4xl">
                                     <CountUp start={0} end={8} duration={5} />
                                 </div>
                                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                                     Awards
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
-                    </motion.div>
+                    </motion.div> */}
                 </div>
 
                 <motion.div
@@ -244,27 +247,43 @@ const About = () => {
                             return (
                                 <div
                                     key={i}
-                                    className="max-w-max flex-1 flex flex-col items-center gap-x-2 text-white/60 md:flex-row"
+                                    className="max-w-max flex-1 flex flex-col justify-evenly items-center gap-x-2 text-white/60 md:flex-row"
                                 >
-                                    <div className="text-xl my-4 md:my-0">
-                                        {currentItem.title}
+                                    <div className="flex flex-col">
+                                        <div className="text-xl font-semibold md:my-0">
+                                            {currentItem.title}
+                                        </div>
+                                        {currentItem.subtitle && (
+                                            <div className="text-lg font-medium md:my-0">
+                                                {currentItem.subtitle}
+                                            </div>
+                                        )}
+                                        <div className="">
+                                            {currentItem.stage}
+                                        </div>
                                     </div>
-                                    <div className="hidden text-xl md:flex">
-                                        <MdOutlineKeyboardDoubleArrowRight />
-                                    </div>
-                                    <div>{currentItem.stage}</div>
-                                    <div className="flex gap-x-4">
-                                        {currentItem.icons?.map((icon, i) => {
-                                            return (
-                                                <div
-                                                    key={i}
-                                                    className="text-4xl hover:text-accent hover:-translate-y-[2px]"
-                                                >
-                                                    {icon}
-                                                </div>
-                                            );
-                                        })}
-                                    </div>
+
+                                    {currentItem.icons && (
+                                        <>
+                                            <div className="hidden text-xl md:flex">
+                                                <MdOutlineKeyboardDoubleArrowRight />
+                                            </div>
+                                            <div className="flex gap-x-4">
+                                                {currentItem.icons?.map(
+                                                    (icon, i) => {
+                                                        return (
+                                                            <div
+                                                                key={i}
+                                                                className="text-4xl hover:text-accent hover:-translate-y-[2px]"
+                                                            >
+                                                                {icon}
+                                                            </div>
+                                                        );
+                                                    }
+                                                )}
+                                            </div>
+                                        </>
+                                    )}
                                 </div>
                             );
                         })}
