@@ -13,13 +13,6 @@ const Header = () => {
             <div className="container mx-auto">
                 <div className="flex flex-col justify-between items-center gap-y-6 lg:flex-row">
                     <Link href={"/"}>
-                        {/* <Image
-                            src={`/logo.svg`}
-                            width={220}
-                            height={48}
-                            alt=""
-                            priority={true}
-                        /> */}
                         <span className="text-5xl font-normal text-white">
                             patrick
                         </span>
